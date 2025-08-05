@@ -182,7 +182,7 @@ h6 {
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: #059652;
   font-size: 14px;
   padding: 8px 20px;
   margin: 0 0 0 30px;
@@ -193,7 +193,7 @@ h6 {
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  background: #048046;
 }
 
 @media (max-width: 1200px) {
@@ -272,7 +272,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: #059652;
   }
 
   .navmenu .dropdown ul {
@@ -718,6 +718,7 @@ section,
 .hero {
   position: relative;
   padding-top: 160px;
+  padding-bottom: 10px;
   background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
 }
 
@@ -728,13 +729,38 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--accent-color), transparent 92%), transparent 40%);
+  background: rgba(97, 97, 97, 0.5);
   pointer-events: none;
+  z-index: 1;
+}
+
+#hero {
+  background-image: url('../img/kabah2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  transition: all 5s;
+  animation: fade 10s infinite;
+  height: 100vh;
+}
+
+@keyframes fade {
+  0% {
+    background-image: url('../img/kabah2.jpg');
+  }
+  50%{
+    background-image: url('../img/masjid-nabawi.jpg');
+  }
+  100%{
+    background-image: url('../img/kabah2.jpg');
+  }
 }
 
 .hero .hero-content {
   position: relative;
   z-index: 1;
+
 }
 
 .hero .hero-content h1 {
@@ -742,10 +768,30 @@ section,
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
+  color: white;
 }
 
 .hero .hero-content h1 .accent-text {
-  color: var(--accent-color);
+  color: #059652;
+}
+
+.paragraf {
+  width: 100%;
+}
+
+.qs{
+  font-size: 1.2rem;
+}
+
+.hero-p{
+  color: white;
+  text-shadow: 1px 1px 10px #555;
+  font-weight: 400;
+  font-size: 1.5rem;
+  background-color: #059652;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 0 5px;
 }
 
 @media (max-width: 992px) {
@@ -753,7 +799,9 @@ section,
     text-align: center;
     margin-bottom: 3rem;
   }
-
+.hero-p{
+  margin: auto;
+}
   .hero .hero-content h1 {
     font-size: 2.5rem;
   }
@@ -784,9 +832,9 @@ section,
 }
 
 .hero .btn-primary {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color: var(--contrast-color);
+  background-color: #059652;
+  border-color: #059652;
+  color: white;
   padding: 0.75rem 2.5rem;
   border-radius: 50px;
   font-weight: 500;
@@ -794,19 +842,22 @@ section,
 }
 
 .hero .btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 20%);
-  border-color: color-mix(in srgb, var(--accent-color), black 20%);
+  background-color: white;
+  border-color: #059652;
+  color: #059652;
 }
 
 .hero .btn-link {
-  color: var(--heading-color);
+  color: white;
+  padding: 0;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .hero .btn-link:hover {
-  color: var(--accent-color);
+  color: #059652;
 }
 
 .hero .btn-link i {
@@ -910,7 +961,16 @@ section,
 
 .hero .stat-item .stat-icon i {
   font-size: 1.5rem;
-  color: var(--accent-color);
+  color: #059652;
+}
+
+.hero .stat-item .stat-icon:hover {
+  background-color: #059652 !important;
+}
+
+.hero .stat-item .stat-icon i:hover {
+  color: white;
+  background-color: #059652;
 }
 
 .hero .stat-item:hover .stat-icon {
@@ -960,8 +1020,11 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+#about {
+  background-color: #059652;
+}
 .about .about-meta {
-  color: var(--accent-color);
+  color: white;
   font-weight: 600;
   margin-bottom: 1rem;
   display: inline-block;
@@ -972,6 +1035,7 @@ section,
   margin-bottom: 1rem;
   line-height: 1.2;
   font-weight: 700;
+  color: white;
 }
 
 @media (max-width: 992px) {
@@ -982,11 +1046,13 @@ section,
 
 .about .about-description {
   margin-bottom: 2rem;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 20%); */
+  color: white;
 }
 
 .about .feature-list-wrapper {
   margin-bottom: 2rem;
+  color: white;
 }
 
 .about .feature-list {
@@ -1004,8 +1070,9 @@ section,
 }
 
 .about .feature-list li i {
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
   font-size: 1.25rem;
+  color: white;
 }
 
 .about .profile .profile-image {
@@ -1018,10 +1085,11 @@ section,
 .about .profile .profile-name {
   font-size: 1.125rem;
   margin: 0;
+  color: white;
 }
 
 .about .profile .profile-position {
-  color: var(--accent-color);
+  color: white;
   margin: 0;
   font-size: 0.875rem;
 }
@@ -1034,7 +1102,7 @@ section,
 }
 
 .about .contact-info i {
-  color: var(--accent-color);
+  color: #059652;
   font-size: 1.5rem;
 }
 
@@ -1098,14 +1166,15 @@ section,
   position: absolute;
   bottom: 5%;
   right: 5%;
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+  background-color: white;
+  color: #059652;
   padding: 1.5rem;
   border-radius: 0.5rem;
   text-align: center;
   min-width: 200px;
   animation: experience-float 3s ease-in-out infinite;
 }
+
 
 @media (max-width: 992px) {
   .about .image-wrapper .experience-badge {
@@ -1116,7 +1185,7 @@ section,
 }
 
 .about .image-wrapper .experience-badge h3 {
-  color: var(--contrast-color);
+  color: #059652;
   font-size: 2.5rem;
   margin: 0;
   line-height: 0.5;
