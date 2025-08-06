@@ -577,6 +577,15 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Typeit cursor
+--------------------------------------------------------------*/
+
+#textTipeit .ti-cursor {
+  color: #059652;
+  transform: translateX(-0.1em);
+}
+
+/*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
@@ -586,7 +595,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: #059652;
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -600,7 +609,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: color-mix(in srgb, #059652, transparent 20%);
   color: var(--contrast-color);
 }
 
@@ -701,7 +710,7 @@ section,
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--accent-color);
+  background: #059652;
   left: 0;
   right: 0;
   bottom: 0;
@@ -719,6 +728,9 @@ section,
   position: relative;
   padding-top: 160px;
   padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
 }
 
@@ -799,9 +811,12 @@ section,
     text-align: center;
     margin-bottom: 3rem;
   }
-.hero-p{
-  margin: auto;
-}
+  .hero-p{
+    margin: auto;
+  }
+  .sitename{
+    font-size: 1rem;
+  }
   .hero .hero-content h1 {
     font-size: 2.5rem;
   }
@@ -1266,22 +1281,23 @@ section,
 }
 
 .features .nav-link h4 {
+  color: #059652;
   font-size: 14px;
   font-weight: 500;
   margin: 0;
 }
 
 .features .nav-link:hover {
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  border-color: #059652;
 }
 
 .features .nav-link:hover h4 {
-  color: var(--accent-color);
+  color: #048046;
 }
 
 .features .nav-link.active {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background-color: #059652;
+  border-color: white;
 }
 
 .features .nav-link.active h4 {
@@ -1307,7 +1323,7 @@ section,
   display: block;
   width: 60px;
   height: 3px;
-  background: var(--accent-color);
+  background: #059652;
   left: 0;
   bottom: 0;
 }
@@ -1743,7 +1759,7 @@ section,
   display: block;
   width: 25px;
   height: 3px;
-  background: var(--accent-color);
+  background: #059652;
   left: 0;
   right: 0;
   bottom: 0;
@@ -1774,24 +1790,24 @@ section,
 }
 
 .services .service-card:hover .icon {
-  background: var(--accent-color);
+  background: #059652;
   color: var(--contrast-color);
 }
 
 .services .service-card:hover .read-more {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, #059652, transparent 25%);
 }
 
 .services .service-card .icon {
   width: 60px;
   height: 60px;
   margin-right: 30px;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  background: color-mix(in srgb, #059652, transparent 90%);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  color: var(--accent-color);
+  color: #059652;
   font-size: 28px;
   transition: all 0.3s ease;
   line-height: 1;
@@ -1814,7 +1830,7 @@ section,
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--accent-color);
+  color: #048046;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -2017,7 +2033,7 @@ section,
 }
 
 .faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
+  color: #048046;
 }
 
 .faq .faq-container .faq-item .faq-content {
@@ -2044,11 +2060,11 @@ section,
 }
 
 .faq .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
+  color: #059652;
 }
 
 .faq .faq-container .faq-active h3 {
-  color: var(--accent-color);
+  color: #059652;
 }
 
 .faq .faq-container .faq-active .faq-content {
@@ -2060,7 +2076,7 @@ section,
 
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
-  color: var(--accent-color);
+  color: #059652;
 }
 
 /*--------------------------------------------------------------
@@ -2107,7 +2123,7 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-box {
-  background-color: var(--accent-color);
+  background-color: #059652;
   color: var(--contrast-color);
   padding: 3rem;
   border-radius: 1rem;
@@ -2230,7 +2246,7 @@ section,
 .contact .contact-form .form-control:focus,
 .contact .contact-form .form-select:focus {
   box-shadow: none;
-  border-color: var(--accent-color);
+  border-color: #059652;
 }
 
 .contact .contact-form .form-control::placeholder,
@@ -2239,7 +2255,7 @@ section,
 }
 
 .contact .contact-form .btn {
-  background-color: var(--accent-color);
+  background-color: #059652;
   color: var(--contrast-color);
   padding: 1rem 2rem;
   border-radius: 2rem;
@@ -2254,7 +2270,7 @@ section,
 }
 
 .contact .contact-form .btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), var(--contrast-color) 20%);
+  background-color: color-mix(in srgb, #059652, var(--contrast-color) 20%);
 }
 
 /*--------------------------------------------------------------
@@ -2299,12 +2315,12 @@ section,
 .service-details .services-list a i {
   font-size: 16px;
   margin-right: 8px;
-  color: var(--accent-color);
+  color: #059652;
 }
 
 .service-details .services-list a.active {
   color: var(--contrast-color);
-  background-color: var(--accent-color);
+  background-color: #059652;
 }
 
 .service-details .services-list a.active i {
@@ -2312,8 +2328,8 @@ section,
 }
 
 .service-details .services-list a:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  color: var(--accent-color);
+  background-color: color-mix(in srgb, #059652, transparent 95%);
+  color: #059652;
 }
 
 .service-details .download-catalog a {
