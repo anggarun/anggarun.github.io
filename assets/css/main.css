@@ -814,8 +814,8 @@ section,
   .hero-p{
     margin: auto;
   }
-  .sitename{
-    font-size: 1rem;
+  .header .logo h1{
+    font-size: 1.2rem;
   }
   .hero .hero-content h1 {
     font-size: 2.5rem;
