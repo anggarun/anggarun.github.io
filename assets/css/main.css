@@ -309,7 +309,7 @@ h6 {
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
+    color: #059652;
   }
 
   .navmenu .dropdown:hover>ul {
@@ -394,14 +394,14 @@ h6 {
 
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
+    background-color: #059652;
     color: var(--contrast-color);
   }
 
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
+    color: #059652;
   }
 
   .navmenu .active i,
@@ -451,7 +451,7 @@ h6 {
     overflow: hidden;
     inset: 0;
     background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
+    transition: 0.8s ease-in-out;
   }
 
   .mobile-nav-active .navmenu>ul {
@@ -726,7 +726,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   position: relative;
-  padding-top: 160px;
+  padding-top: 0;
   padding-bottom: 10px;
   display: flex;
   justify-content: center;
@@ -1267,6 +1267,77 @@ section,
   height: 100%;
   border: 0;
   margin: 0;
+}
+.gambar-makkah, .gambar-madinah {
+  width: 100%;
+  border-radius: 30px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Animasi untuk .gambar-makkah */
+.gambar-makkah {
+  animation-name: bgChangeMakkah;
+}
+
+@keyframes bgChangeMakkah {
+  0%   { background-image: url('../img/tabmakkah1.jpeg'); }
+  33%  { background-image: url('../img/tabmakkah2.jpg'); }
+  66%  { background-image: url('../img/tabmakkah3.jpg'); }
+  100% { background-image: url('../img/tabmakkah1.jpeg'); }
+}
+
+/* Animasi untuk .gambar-madinah */
+.gambar-madinah {
+  animation-name: bgChangeMadinah;
+}
+
+@keyframes bgChangeMadinah {
+  0%   { background-image: url('../img/tabmadina1.jpg'); }
+  33%  { background-image: url('../img/tabmadina2.jpg'); }
+  66%  { background-image: url('../img/tabmadina3.jpg'); }
+  100% { background-image: url('../img/tabmadina1.jpg'); }
+}
+
+.education {
+
+  padding-top: 30px;
+  max-height: 350px;
+  overflow-y: scroll;
+
+  /* Untuk Firefox */
+  /* scrollbar-width: none;  */
+}
+
+/* Untuk Chrome, Edge, Safari */
+/* .education::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+} */
+
+/* width */
+.education::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+.education::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+/* Handle */
+.education::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.education::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 @media (max-width: 468px) {

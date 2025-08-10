@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+ <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Fadhilah Amal Haramain | Official Website</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="WhatsApp Image 2025-02-10 at 11.37.29.jpeg" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h2 {
+            color: #006e3c;
+            border-left: 5px solid #00a651;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+        .arabic {
+            font-size: 1.3rem;
+            text-align: right;
+            direction: rtl;
+            margin-bottom: 20px;
+            line-height: 2;
+        }
+        .highlight {
+            background-color: #f0f9f4;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #00a651;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta a {
+            display: inline-block;
+            background: #00a651;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .cta a:hover {
+            background: #008a4d;
+        }
+        .story {
+            font-size: 1.05rem;
+            margin-top: 15px;
+        }
+        footer {
+            background: #006e3c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+        .hero {
+        position: relative;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        animation: bgSlide 15s infinite ease-in-out;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 1s ease-in-out;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: white !important;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        color: white !important;
+        text-shadow: 1px 1px 5px white;
+    }
+    .gambar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .gambar img{
+        height: 300px;
+        border-radius: 30px;
+    }
+
+    /* Animasi ganti background */
+    @keyframes bgSlide {
+        0% {
+            background-image: url('assets/img/tabmakkah2.jpg');
+        }
+        33% {
+            background-image: url('assets/img/tabmakkah3.jpg');
+        }
+        66% {
+            background-image: url('assets/img/tabmakkah4.jpg');
+        }
+        100% {
+            background-image: url('assets/img/tabmakkah2.jpg');
+        }
+    }
+    </style>
+</head>
+<body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <img
+          src="WhatsApp Image 2025-02-10 at 11.37.29.jpeg"
+          alt="logo"
+          style="border-radius: 50%; width: 50px; height: 50px"
+        />
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">Fadhilah Amal</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero" class="active">Beranda</a></li>
+            <li class="dropdown">
+              <a href="#" class="toggle-dropdown">Haramain</a>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#features" id="tab-makkah">Makkah</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#features" id="tab-madinah">Madinah</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="makkah.html">Makkah Halaman lain</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="madinah.html">Madinah Halaman lain</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="index.html#services">Layanan</a></li>
+            <li><a href="index.html#about">Tentang</a></li>
+            <li><a href="index.html#contact">Hubungi Kami</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-getstarted" href="index.html#about">Mulai</a>
+      </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Keutamaan Kota Mekkah</h1>
+            <p>Kota suci yang menjadi pusat ibadah umat Islam, tempat turunnya wahyu, dan tujuan utama perjalanan spiritual yang diberkahi.</p>
+        </div>
+    </div>
+
+    <section>
+        <h2>Dalil dari Al-Qur'an</h2>
+        <div class="arabic">
+            إِنَّ أَوَّلَ بَيْتٍ وُضِعَ لِلنَّاسِ لَلَّذِي بِبَكَّةَ مُبَارَكًا وَهُدًى لِّلْعَالَمِينَ
+        </div>
+        <p>“Sesungguhnya rumah (ibadah) pertama yang dibangun untuk manusia ialah Baitullah yang berada di Bakkah (Mekkah) yang diberkahi dan menjadi petunjuk bagi seluruh alam.” <strong>(QS. Ali Imran: 96)</strong></p>
+
+        <h2>Keistimewaan Mekkah</h2>
+        <div class="highlight">
+            <ul>
+                <li><strong>Tanah Haram</strong> – dilindungi dan dimuliakan oleh Allah, tidak boleh ada peperangan dan perusakan di dalamnya.</li>
+                <li><strong>Pusat Kiblat</strong> – seluruh umat Islam di dunia menghadap ke Ka'bah saat shalat.</li>
+                <li><strong>Masjidil Haram</strong> – pahala shalat di sini dilipatgandakan hingga 100.000 kali lipat.</li>
+                <li><strong>Tempat Ibadah Haji dan Umroh</strong> – rukun Islam kelima yang wajib bagi yang mampu.</li>
+                <li><strong>Sejarah Kenabian</strong> – tempat kelahiran Nabi Muhammad ﷺ dan sejarah para nabi sebelumnya.</li>
+            </ul>
+        </div>
+        <div class="gambar">
+            <img src="assets/img/tabmakkah4.jpg"  alt="Suasana Masjidil Haram di Mekkah">
+        </div>
+
+        <h2>Hadits tentang Keutamaan Mekkah</h2>
+        <p>Rasulullah ﷺ bersabda: <em>“Demi Allah, sesungguhnya engkau (Mekkah) adalah sebaik-baik bumi Allah dan bumi yang paling Allah cintai. Seandainya aku tidak diusir darimu, aku tidak akan meninggalkanmu.”</em> <strong>(HR. Tirmidzi)</strong></p>
+
+        <h2>Kenapa Harus Mengunjungi Mekkah?</h2>
+        <div class="story">
+            Berkunjung ke Mekkah bukan sekadar perjalanan fisik, tetapi perjalanan hati. Saat melangkah di pelataran Masjidil Haram, setiap nafas terasa lebih bermakna. Pandangan pertama ke Ka'bah menggetarkan jiwa, air mata mengalir tanpa disadari, dan hati dipenuhi rasa syukur. 
+            Di sanalah setiap doa dipanjatkan dengan penuh harap, memohon ampunan dan rahmat dari Allah.
+        </div>
+
+        <p>Mekkah adalah tempat di mana jutaan umat Islam dari berbagai negara berkumpul dalam satu pakaian, satu tujuan, dan satu hati — mengingatkan kita akan kesatuan dan persaudaraan umat.</p>
+
+        <div class="highlight">
+            <strong>Manfaat Spiritual Kunjungan ke Mekkah:</strong>
+            <ul>
+                <li>Pembersihan dosa dan peningkatan iman.</li>
+                <li>Peluang memperbanyak amal shaleh dengan pahala berlipat.</li>
+                <li>Kesempatan merasakan suasana ukhuwah Islamiyah global.</li>
+                <li>Meneladani perjuangan Nabi Ibrahim, Nabi Ismail, dan Rasulullah ﷺ.</li>
+            </ul>
+        </div>
+
+        <div class="cta">
+            <a href="#hubungi">Daftar Umroh Bersama Fadhilah Amal</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fadhilah Amal | Jasa Haji & Umroh Resmi</p>
+    </footer>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+        <!-- Main JS File -->
+    <script src="https://unpkg.com/typeit/dist/index.umd.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

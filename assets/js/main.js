@@ -39,26 +39,84 @@
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
+// Fungsi untuk buka dropdown dengan animasi
+function openDropdown(ul) {
+  ul.style.display = 'block';
+  ul.style.overflow = 'hidden';
+  ul.style.maxHeight = '0px';
+  ul.style.opacity = '0';
+  ul.style.transform = 'translateY(-10px)';
+  ul.style.transition = 'all 0.3s ease';
+
+  requestAnimationFrame(() => {
+    ul.style.maxHeight = ul.scrollHeight + 'px';
+    ul.style.opacity = '1';
+    ul.style.transform = 'translateY(0)';
+  });
+}
+
+// Fungsi untuk tutup dropdown dengan animasi
+function closeDropdown(ul) {
+  ul.style.maxHeight = ul.scrollHeight + 'px'; // set dulu tinggi sekarang
+  ul.style.opacity = '1';
+  ul.style.transform = 'translateY(0)';
+
+  requestAnimationFrame(() => {
+    ul.style.maxHeight = '0px';
+    ul.style.opacity = '0';
+    ul.style.transform = 'translateY(-10px)';
+  });
+
+  setTimeout(() => {
+    ul.style.display = 'none';
+  }, 300); // tunggu transisi selesai
+}
+
+// Toggle dropdown saat klik tombol dropdown
+document.querySelectorAll('#navmenu .toggle-dropdown').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const dropdownMenu = this.nextElementSibling;
+
+    // Tutup semua dropdown lain
+    document.querySelectorAll('#navmenu .dropdown ul').forEach(ul => {
+      if (ul !== dropdownMenu) closeDropdown(ul);
+    });
+
+    // Toggle dropdown yang diklik
+    if (dropdownMenu.style.display === 'block') {
+      closeDropdown(dropdownMenu);
+    } else {
+      openDropdown(dropdownMenu);
+    }
+  });
+});
+
+// Semua link di menu (termasuk dalam dropdown) → klik nutup menu
+document.querySelectorAll('#navmenu a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    if (this.classList.contains('toggle-dropdown')) return;
+
+    document.querySelectorAll('#navmenu .dropdown ul').forEach(ul => {
+      closeDropdown(ul);
+    });
+
+    if (document.querySelector('.mobile-nav-active')) {
+      if (typeof mobileNavToogle === 'function') {
         mobileNavToogle();
       }
-    });
-
+    }
   });
+});
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
+// Klik di luar menu → tutup dropdown
+document.addEventListener('click', function() {
+  document.querySelectorAll('#navmenu .dropdown ul').forEach(ul => {
+    closeDropdown(ul);
   });
+});
 
   /**
    * Scroll top button

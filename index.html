@@ -69,7 +69,23 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="#hero" class="active">Beranda</a></li>
-            <li><a href="#features">Haramain</a></li>
+            <li class="dropdown">
+              <a href="#" class="toggle-dropdown">Haramain</a>
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="#features" id="tab-makkah">Makkah</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#features" id="tab-madinah">Madinah</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="makkah.html">Makkah Halaman lain</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="madinah.html">Madinah Halaman lain</a>
+                </li>
+              </ul>
+            </li>
             <li><a href="#services">Layanan</a></li>
             <li><a href="#about">Tentang</a></li>
             <li><a href="#contact">Hubungi Kami</a></li>
@@ -225,8 +241,7 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>Haramain</h2>
           <p>
-            Kami menyediakan beberapa paket unggulan yang bisa anda pilih sesuai
-            keinginan anda.
+            Haramain adalah dua kota suci, Makkah dan Madinah, tempat ibadah haji dan umrah. Impian setiap muslim.
           </p>
         </div>
         <!-- End Section Title -->
@@ -239,6 +254,7 @@
                   class="nav-link active show"
                   data-bs-toggle="tab"
                   data-bs-target="#features-tab-1"
+                  id="link-tab1"
                 >
                   <h4>Makkah</h4>
                 </a>
@@ -248,6 +264,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link"
+                  id="link-tab2"
                   data-bs-toggle="tab"
                   data-bs-target="#features-tab-2"
                 >
@@ -261,7 +278,7 @@
             <div class="tab-pane fade active show" id="features-tab-1">
               <div class="row">
                 <div
-                  class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                  class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 education"
                 >
                   <h3>Keutamaan Makkah</h3>
                   <p class="fst-italic qs" align="right">
@@ -295,12 +312,7 @@
                   </ul> -->
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 text-center">
-                  <img
-                    src="assets/img/kabah.jpg"
-                    alt=""
-                    class="img-fluid"
-                    style="border-radius: 30px;"
-                  />
+                  <div class="gambar-makkah"></div>
                 </div>
               </div>
             </div>
@@ -309,7 +321,7 @@
             <div class="tab-pane fade" id="features-tab-2">
               <div class="row">
                 <div
-                  class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                  class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 education"
                 >
                   <h3>Keutamaan Madinah</h3>
                   <p class="fst-italic qs" align="right">
@@ -351,12 +363,7 @@
                   </ul> -->
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 text-center">
-                  <img
-                    src="assets/img/masjid-nabawi.jpg"
-                    alt=""
-                    class="img-fluid"
-                    style="border-radius: 30px;"
-                  />
+                  <div class="gambar-madinah"></div>
                 </div>
               </div>
             </div>
@@ -367,78 +374,65 @@
       <!-- /Features Section -->
 
       <!-- Features Cards Section -->
-      <section id="features-cards" class="features-cards section">
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-xl-3 col-md-6"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div class="feature-box orange">
-                <i class="bi bi-award"></i>
-                <h4>Bersertifikat</h4>
-                <p>
-                  Kami adalah travel haji & umroh yang telah terdaftar dan telah
-                  mendapatkan sertifikat resmi dari kementrian Agama.
-                </p>
-              </div>
-            </div>
-            <!-- End Feature Borx-->
+<section id="features-cards" class="features-cards section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Mengapa Bersama Kami?</h2>
+    <p>
+      Pilih kami sebagai partner perjalanan spiritual Anda, karena kami berdedikasi penuh untuk memberikan pelayanan terbaik, nyaman, dan terpercaya.
+    </p>
+  </div>
+  <!-- End Section Title -->
 
-            <div
-              class="col-xl-3 col-md-6"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div class="feature-box blue">
-                <i class="bi bi-patch-check"></i>
-                <h4>Terpercaya</h4>
-                <p>
-                  Kami adalah pilihan terpercaya untuk perjalanan haji & umroh
-                  Anda. Dengan pengalaman kami yang selalu mengutamakan kepuasan
-                  dan kenyamanan jamaah.
-                </p>
-              </div>
-            </div>
-            <!-- End Feature Borx-->
-
-            <div
-              class="col-xl-3 col-md-6"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
-              <div class="feature-box green">
-                <i class="bi bi-sunrise"></i>
-                <h4>Amanah</h4>
-                <p>
-                  Kami juga mengutamakan prinsip amanah dalam setiap layanan
-                  yang kami berikan karna, Kepercayaan anda adalah tanggung
-                  jawab kami.
-                </p>
-              </div>
-            </div>
-            <!-- End Feature Borx-->
-
-            <div
-              class="col-xl-3 col-md-6"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
-              <div class="feature-box red">
-                <i class="bi bi-shield-check"></i>
-                <h4>Aman</h4>
-                <p>
-                  Keamanan jamaah merupakan prioritas kami, kami mengusahakan
-                  perjalanan anda berjalan aman, dari keberangkatan hingga
-                  kembali ketanah air.
-                </p>
-              </div>
-            </div>
-            <!-- End Feature Borx-->
-          </div>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="feature-box orange">
+          <i class="bi bi-award"></i>
+          <h4>Bersertifikat</h4>
+          <p>
+            Kami adalah travel haji & umroh yang telah terdaftar dan mendapatkan sertifikat resmi dari Kementerian Agama.
+          </p>
         </div>
-      </section>
+      </div>
+      <!-- End Feature Box -->
+
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="feature-box blue">
+          <i class="bi bi-patch-check"></i>
+          <h4>Terpercaya</h4>
+          <p>
+            Pilihan terpercaya dengan pengalaman panjang yang selalu mengutamakan kepuasan dan kenyamanan jamaah.
+          </p>
+        </div>
+      </div>
+      <!-- End Feature Box -->
+
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+        <div class="feature-box green">
+          <i class="bi bi-sunrise"></i>
+          <h4>Amanah</h4>
+          <p>
+            Menjunjung tinggi amanah dalam setiap layanan, karena kepercayaan Anda adalah tanggung jawab kami.
+          </p>
+        </div>
+      </div>
+      <!-- End Feature Box -->
+
+      <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+        <div class="feature-box red">
+          <i class="bi bi-shield-check"></i>
+          <h4>Aman</h4>
+          <p>
+            Keamanan jamaah adalah prioritas utama kami, menjamin perjalanan Anda aman dari awal hingga kembali ke tanah air.
+          </p>
+        </div>
+      </div>
+      <!-- End Feature Box -->
+    </div>
+  </div>
+</section>
+
       <!-- /Features Cards Section -->
 
       <!-- Features 2 Section -->
@@ -980,144 +974,88 @@
       <section id="services" class="services section light-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Fasilitas Layanan Kami</h2>
+          <h2>Paket Perjalanan Spiritual Kami</h2>
           <p>
-            Kami terus berusaha untuk meningkatkan fasilitas pelayanan kami demi
-            meningkatkan kepuasan anda.
+            Bersiaplah menyambut perjalanan suci yang penuh makna, membuka pintu rahmat dan keberkahan untuk jiwa dan raga Anda.
           </p>
         </div>
         <!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row g-4">
+            
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <div class="service-card d-flex">
                 <div class="icon flex-shrink-0">
-                  <i class="bi bi-activity"></i>
+                  <i class="bi bi-airplane"></i>
                 </div>
                 <div>
-                  <h3>Kain Ihram</h3>
+                  <h3>Paket Ekonomi – Langkah Awal Menyentuh Hati</h3>
                   <p>
-                    Setiap jamaah akan diberikan kain ihram yang digunakan saat
-                    melaksanakan ibadah Haji atau Umroh. Kain ihram ini
-                    merupakan salah satu fasilitas standar yang wajib untuk
-                    ibadah haji dan umroh, sesuai dengan ketentuan syariat.
+                    Perjalanan yang terjangkau, namun penuh berkah, membawa Anda menapaki jejak para nabi dengan ketulusan dan harapan.
                   </p>
-                  <a href="service-details.html" class="read-more"
-                    >Selengkapnya <i class="bi bi-arrow-right"></i
-                  ></a>
+                  <p><strong>Harga:</strong> Rp25.000.000 / orang</p>
+                  <a href="#" class="read-more">Rasakan Perjalanan Ini <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
-            <!-- End Service Card -->
+            <!-- End Paket Ekonomi -->
 
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <div class="service-card d-flex">
                 <div class="icon flex-shrink-0">
-                  <i class="bi bi-diagram-3"></i>
+                  <i class="bi bi-star"></i>
                 </div>
                 <div>
-                  <h3>Buku Panduan Haji & Umroh</h3>
+                  <h3>Paket Premium – Kenyamanan Menyentuh Jiwa</h3>
                   <p>
-                    Setiap jamaah akan diberikan buku panduan lengkap tentang
-                    tata cara ibadah Haji dan Umroh, doa-doa yang diperlukan,
-                    serta informasi penting lainnya. Buku ini memandu jamaah
-                    agar lebih mudah memahami setiap langkah ibadah.
+                    Hadirkan kenyamanan dan ketenangan selama ibadah Anda, dengan sentuhan eksklusif yang menguatkan ikatan spiritual.
                   </p>
-                  <a href="service-details.html" class="read-more"
-                    >Selengkapnya <i class="bi bi-arrow-right"></i
-                  ></a>
+                  <p><strong>Harga:</strong> Rp40.000.000 / orang</p>
+                  <a href="#" class="read-more">Mulai Perjalanan Suci <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
-            <!-- End Service Card -->
+            <!-- End Paket Premium -->
 
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
               <div class="service-card d-flex">
                 <div class="icon flex-shrink-0">
-                  <i class="bi bi-easel"></i>
+                  <i class="bi bi-gem"></i>
                 </div>
                 <div>
-                  <h3>ID Card dan Label Nama</h3>
+                  <h3>Paket VIP – Sentuhan Istimewa dalam Ibadah</h3>
                   <p>
-                    Setiap jamaah akan diberikan ID card sebagai tanda pengenal
-                    selama perjalanan Haji dan Umroh. ID card ini memuat nama,
-                    alamat, nomor telepon darurat, serta informasi penting
-                    lainnya yang memudahkan komunikasi dan keamanan.
+                    Raih pengalaman spiritual tiada tara dengan fasilitas terbaik dan pendamping berpengalaman yang mendampingi setiap langkah doa Anda.
                   </p>
-                  <a href="service-details.html" class="read-more"
-                    >Selengkapnya <i class="bi bi-arrow-right"></i
-                  ></a>
+                  <p><strong>Harga:</strong> Rp60.000.000 / orang</p>
+                  <a href="#" class="read-more">Temukan Keajaiban <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
-            <!-- End Service Card -->
+            <!-- End Paket VIP -->
 
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
               <div class="service-card d-flex">
                 <div class="icon flex-shrink-0">
-                  <i class="bi bi-clipboard-data"></i>
+                  <i class="bi bi-calendar-check"></i>
                 </div>
                 <div>
-                  <h3>Perlengkapan Umroh & Haji</h3>
+                  <h3>Paket Ramadhan Spesial – Berkah Bulan Suci</h3>
                   <p>
-                    Selain kain ihram, jamaah juga akan mendapatkan perlengkapan
-                    ibadah lainnya seperti koper, tas travel, sajadah, tasbih,
-                    dan kipas portable untuk kenyamanan ibadah di tanah suci.
-                    Semua perlengkapan ini dirancang untuk mempermudah
-                    perjalanan ibadah.
+                    Melangkah dalam cahaya Ramadhan dengan program khusus yang memperkaya hati dan memperkuat iman di bulan penuh rahmat.
                   </p>
-                  <a href="service-details.html" class="read-more"
-                    >Selengkapnya <i class="bi bi-arrow-right"></i
-                  ></a>
+                  <p><strong>Harga:</strong> Rp45.000.000 / orang</p>
+                  <a href="#" class="read-more">Mari Bersama Menyucikan Jiwa <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div>
-            <!-- End Service Card -->
+            <!-- End Paket Ramadhan -->
 
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-              <div class="service-card d-flex">
-                <div class="icon flex-shrink-0">
-                  <i class="bi bi-umbrella"></i>
-                </div>
-                <div>
-                  <h3>Alat Kesehatan</h3>
-                  <p>
-                    Fasilitas ini termasuk alat kesehatan dasar seperti masker,
-                    antiseptik, dan perlengkapan kebersihan lainnya yang penting
-                    selama berada di Tanah Suci, untuk menjaga kesehatan dan
-                    kenyamanan jamaah selama beribadah.
-                  </p>
-                  <a href="service-details.html" class="read-more"
-                    >Selengkapnya <i class="bi bi-arrow-right"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-              <div class="service-card d-flex">
-                <div class="icon flex-shrink-0">
-                  <i class="bi bi-house"></i>
-                </div>
-                <div>
-                  <h3>Penginapan Berkualitas</h3>
-                  <p>
-                    Jamaah akan mendapatkan fasilitas penginapan yang nyaman dan
-                    strategis, dekat dengan lokasi ibadah. Penginapan ini
-                    dilengkapi dengan fasilitas standar hotel, seperti AC, WiFi,
-                    dan layanan makan, untuk memastikan kenyamanan jamaah selama
-                    beribadah.
-                  </p>
-                  <a href="service-details.html" class="read-more"
-                    >Selengkapnya <i class="bi bi-arrow-right"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <!-- End Service Card -->
           </div>
         </div>
       </section>
+
       <!-- /Services Section -->
 
       <!-- Pricing Section -->
@@ -1405,43 +1343,22 @@
               <span class="about-meta">Tentang</span>
               <h2 class="about-title">Hajj & Umroh</h2>
               <p class="about-description">
-                Perusahaan yang berdiri secara resmi pada tahun 2001 dengan nama
-                Pt. Fadilahamal. Kami adalah perusahaan yang bergerak dibidang
-                jasa Haji dan Umroh. Sebuah perusahaan travel yang
-                berkepentingan dinegara yang berpusat dikingdom of saudi arabia.
-                Telah melayani lebih dari 30 Haji dan Umroh di indonesia.
+                Perusahaan yang berdiri secara resmi pada tahun 2001 dengan nama Pt. Fadilahamal. Kami bergerak di bidang jasa Haji dan Umroh, berpusat di Kingdom of Saudi Arabia. Telah melayani lebih dari 30 kloter Haji dan Umroh di Indonesia.
               </p>
 
               <div class="row feature-list-wrapper">
                 <div class="col-md-6">
                   <ul class="feature-list">
-                    <li>
-                      <i class="bi bi-check-circle-fill"></i> Sesuai Syariat
-                      Islam
-                    </li>
-                    <li>
-                      <i class="bi bi-check-circle-fill"></i> Kajian Agama
-                      Selama Disaudi
-                    </li>
-                    <li>
-                      <i class="bi bi-check-circle-fill"></i> Pembimbing yang
-                      Profesional
-                    </li>
+                    <li><i class="bi bi-check-circle-fill"></i> Tim Pemandu</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Dampingan Ibadah</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Konsultasi Persiapan</li>
                   </ul>
                 </div>
                 <div class="col-md-6">
                   <ul class="feature-list">
-                    <li>
-                      <i class="bi bi-check-circle-fill"></i> Fasilitas yang
-                      Nyaman & Baik
-                    </li>
-                    <li>
-                      <i class="bi bi-check-circle-fill"></i> Berizin Resmi
-                    </li>
-                    <li>
-                      <i class="bi bi-check-circle-fill"></i> Tersedia Paket
-                      Tabungan
-                    </li>
+                    <li><i class="bi bi-check-circle-fill"></i> Akomodasi Nyaman</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Dukungan Kesehatan</li>
+                    <li><i class="bi bi-check-circle-fill"></i> Paket Terjangkau</li>
                   </ul>
                 </div>
               </div>
@@ -1486,21 +1403,13 @@
                     alt="Business Meeting"
                     class="img-fluid main-image rounded-4"
                   />
-                  <!-- <img
-                    src="haji-umrah-ihram-freepik_1657339462.webp"
-                    alt="Team Discussion"
-                    class="img-fluid small-image rounded-4"
-                  /> -->
                 </div>
-                <!-- <div class="experience-badge floating">
-                  <h3>20+ <span>Tahun</span></h3>
-                  <p>Pengalaman dibidang travel</p>
-                </div> -->
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <!-- /About Section -->
 
       <!-- Contact Section -->
@@ -1532,9 +1441,8 @@
                     <i class="bi bi-geo-alt"></i>
                   </div>
                   <div class="content">
-                    <h4>Lokasi Kami</h4>
-                    <p>Jl. Raya Haji No. 10</p>
-                    <p>Mekkah, Arab Saudi</p>
+                    <h4>Lokasi Kantor</h4>
+                    <p>Jl. Gatot Subroto Km. 3, No. 78, Cimone, Kec. Karawaci, Tangerang-Banten-Indonesia 15114.</p>
                   </div>
                 </div>
 
@@ -1571,7 +1479,7 @@
                 </p>
 
                 <form
-                  action="forms/contact.php"
+                  action="https://formsubmit.co/anggarun8@gmail.com"
                   method="post"
                   class="php-email-form"
                   data-aos="fade-up"
@@ -1579,6 +1487,7 @@
                 >
                   <div class="row gy-4">
                     <div class="col-md-6">
+                      <input type="hidden" name="_captcha" value="false">
                       <input
                         type="text"
                         name="name"
@@ -1721,30 +1630,98 @@
     <!-- Main JS File -->
     <script src="https://unpkg.com/typeit/dist/index.umd.js"></script>
     <script>
-    new TypeIt('#textTipeit', {
-      speed: 50,
-      loop: true,
-      beforeString: () => {
-        const cursor = document.querySelector("#textTipeit .ti-cursor");
-        if (cursor) cursor.style.display = "inline";
-      }
-    }) 
-      .type("selamat datang", {delay: 500})
-      .move(-13, {delay: 300})
-      .delete(1, {pause: 200})
-      .type("S", {pause: 300})
-      .move(13, {delay: 200})
-      .type("<br/>", {delay : 500})
-      .type(" di Fadhilah amal")            
-      .type("<br/>", {delay : 300})
-      .type("Haramain")
-      .exec(() => {
+      new TypeIt('#textTipeit', {
+        speed: 100,
+        loop: true,
+        beforeString: () => {
           const cursor = document.querySelector("#textTipeit .ti-cursor");
-          if (cursor) cursor.style.display = "none"; // cukup disembunyiin
-        })      
-      .go();
+          if (cursor) cursor.style.display = "inline";
+        }
+      })
+        .type("Saatnya Menjawab<br>Panggilan-Nya...", {pause: 2000})
+        .delete(33, {delay: 500}) // sesuaikan dengan panjang teks yang dihapus tanpa tag <br>
+        .type("Baitullah Menantimu<br>dengan Rindu...", {pause: 2000})
+        .delete(35, {delay: 500})
+        .type("Langkahkan Kakimu<br>Menuju Tanah Suci...", {pause: 2000})
+        .delete(38, {delay: 500})
+        .type("Umroh & Haji :<br>Perjalanan Jiwa yang Suci...", {pause: 2000})
+        .delete(43, {delay: 500})
+        .exec(() => {
+          const cursor = document.querySelector("#textTipeit .ti-cursor");
+          if (cursor) cursor.style.display = "none";
+        })
+        .go();
     </script>
 
+
     <script src="assets/js/main.js"></script>
+    <script>
+      const tabMakkah = document.getElementById('tab-makkah');
+      const tabMadinah = document.getElementById('tab-madinah');
+      const linkTab1 = document.getElementById('link-tab1');
+      const linkTab2 = document.getElementById('link-tab2');
+      const featurestab1 = document.getElementById('features-tab-1');
+      const featurestab2 = document.getElementById('features-tab-2');
+      tabMakkah.addEventListener('click', function() {
+        linkTab1.classList.add('active');
+        linkTab2.classList.remove('active');
+        featurestab1.classList.add('active');
+        featurestab1.classList.add('show');
+        featurestab2.classList.remove('active');
+        featurestab2.classList.remove('show');
+        console.log('sudah');
+      });
+      tabMadinah.addEventListener('click', function() {
+        linkTab1.classList.remove('active');
+        linkTab2.classList.add('active');
+        featurestab1.classList.remove('active');
+        featurestab1.classList.remove('show');
+        featurestab2.classList.add('active');
+        featurestab2.classList.add('show');
+         console.log('sudah');
+      });
+    </script>
+
+    
+    <!-- SweetAlert CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  const form = document.getElementById('contactForm');
+  
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // cegah form submit default
+
+    // Kirim form secara manual dengan fetch
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Pesan terkirim!',
+          text: 'Terima kasih sudah menghubungi kami.',
+        });
+        form.reset();
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Terjadi kesalahan saat mengirim pesan.',
+        });
+      }
+    }).catch(error => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Terjadi kesalahan saat mengirim pesan.',
+      });
+    });
+  });
+</script>
   </body>
 </html>
