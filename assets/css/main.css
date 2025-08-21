@@ -19,10 +19,10 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2d465e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0d83fd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --background-color: rgb(2, 73, 2); /* Background color for the entire website, including individual sections */
+  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: gold; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: darkgreen; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -47,7 +47,7 @@
 .dark-background {
   --background-color: #0d83fd;
   --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --heading-color: gold;
   --surface-color: #409dfd;
   --contrast-color: #ffffff;
 }
@@ -176,7 +176,7 @@ h6 {
   font-size: 24px;
   margin: 0;
   font-weight: 500;
-  color: var(--heading-color);
+  color: var(--accent-color);
 }
 
 .header .btn-getstarted,
@@ -702,6 +702,7 @@ section,
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  color: gold;
 }
 
 .section-title h2:after {
@@ -710,7 +711,7 @@ section,
   display: block;
   width: 50px;
   height: 3px;
-  background: #059652;
+  background: gold;
   left: 0;
   right: 0;
   bottom: 0;
@@ -719,6 +720,7 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+  color: white;
 }
 
 /*--------------------------------------------------------------
@@ -772,7 +774,11 @@ section,
 .hero .hero-content {
   position: relative;
   z-index: 1;
-
+  display: flex;
+  justify-items: left;
+  align-items: start;
+  flex-direction: column;
+  text-align: left !important;
 }
 
 .hero .hero-content h1 {
@@ -1036,7 +1042,7 @@ section,
 # About Section
 --------------------------------------------------------------*/
 #about {
-  background-color: #059652;
+  background-color: var(--background-color);
 }
 .about .about-meta {
   color: white;
@@ -1058,7 +1064,11 @@ section,
     font-size: 2rem;
   }
 }
-
+.note{
+  background-color: var(--accent-color);
+  padding: 20px;
+  border-radius: 20px;
+}
 .about .about-description {
   margin-bottom: 2rem;
   /* color: color-mix(in srgb, var(--default-color), transparent 20%); */
@@ -1117,12 +1127,12 @@ section,
 }
 
 .about .contact-info i {
-  color: #059652;
+  color: var(--accent-color);
   font-size: 1.5rem;
 }
 
 .about .contact-info .contact-label {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--accent-color), transparent 30%);
   font-size: 0.875rem;
   margin: 0;
 }
@@ -1130,6 +1140,7 @@ section,
 .about .contact-info .contact-number {
   font-weight: 600;
   margin: 0;
+  color: var(--accent-color);
 }
 
 .about .image-wrapper {
@@ -1234,9 +1245,14 @@ section,
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
+.features .container:last-child {
+  background-color: var(--accent-color);
+  padding: 1rem;
+  border-radius: 35px;
+}
 .features .nav-tabs {
   border: 0;
-  background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 96%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1306,8 +1322,6 @@ section,
 .education {
 
   padding-top: 30px;
-  max-height: 350px;
-  overflow-y: scroll;
 
   /* Untuk Firefox */
   /* scrollbar-width: none;  */
@@ -1377,6 +1391,7 @@ section,
 
 .features .tab-content {
   margin-top: 30px;
+  padding: 20px;
 }
 
 .features .tab-pane h3 {
@@ -1394,7 +1409,7 @@ section,
   display: block;
   width: 60px;
   height: 3px;
-  background: #059652;
+  background: var(--heading-color);
   left: 0;
   bottom: 0;
 }
@@ -1430,13 +1445,14 @@ section,
   height: 100%;
   padding: 40px 30px;
   border-radius: 10px;
+  background-color: var(--accent-color);
 }
 
 .features-cards .feature-box i {
   font-size: 44px;
   display: inline-block;
   line-height: 0;
-  color: var(--accent-color);
+  color: gold;
   margin-bottom: 20px;
 }
 
@@ -1444,43 +1460,13 @@ section,
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 10px 0;
+  color: gold;
 }
 
 .features-cards .feature-box p {
   font-size: 15px;
   margin-bottom: 0;
-}
-
-.features-cards .feature-box.orange {
-  background-color: #fff3e2;
-}
-
-.features-cards .feature-box.orange i {
-  color: #edb86e;
-}
-
-.features-cards .feature-box.blue {
-  background-color: #deedfd;
-}
-
-.features-cards .feature-box.blue i {
-  color: #20a5f8;
-}
-
-.features-cards .feature-box.green {
-  background-color: #d5f1e4;
-}
-
-.features-cards .feature-box.green i {
-  color: #48c88a;
-}
-
-.features-cards .feature-box.red {
-  background-color: #fdeded;
-}
-
-.features-cards .feature-box.red i {
-  color: #f28484;
+  color: white;
 }
 
 /*--------------------------------------------------------------
@@ -1830,7 +1816,7 @@ section,
   display: block;
   width: 25px;
   height: 3px;
-  background: #059652;
+  background: var(--heading-color);
   left: 0;
   right: 0;
   bottom: 0;
@@ -1851,7 +1837,7 @@ section,
 .services .service-card {
   height: 100%;
   padding: 30px;
-  background: var(--surface-color);
+  background: var(--accent-color);
   border-radius: 10px;
   transition: all 0.3s ease;
 }
@@ -1866,7 +1852,7 @@ section,
 }
 
 .services .service-card:hover .read-more {
-  color: color-mix(in srgb, #059652, transparent 25%);
+  color: color-mix(in srgb, var(--heading-color), transparent 25%);
 }
 
 .services .service-card .icon {
@@ -1901,7 +1887,7 @@ section,
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #048046;
+  color: var(--default-color);
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -2057,6 +2043,9 @@ section,
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
+.faq {
+  background-color: var(--background-color);
+}
 .faq .faq-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -2075,7 +2064,7 @@ section,
 }
 
 .faq .faq-container .faq-item {
-  background-color: var(--surface-color);
+  background-color: var(--accent-color);
   position: relative;
   padding: 20px;
   margin-bottom: 15px;
@@ -2194,7 +2183,7 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-box {
-  background-color: #059652;
+  background-color: darkgreen;
   color: var(--contrast-color);
   padding: 3rem;
   border-radius: 1rem;
@@ -2202,7 +2191,7 @@ section,
 }
 
 .contact .info-box h3 {
-  color: var(--contrast-color);
+  color: gold;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -2276,7 +2265,7 @@ section,
 }
 
 .contact .contact-form {
-  background-color: var(--surface-color);
+  background-color: var(--accent-color);
   padding: 3rem;
   border-radius: 1rem;
   height: 100%;
@@ -2311,18 +2300,18 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 0.5rem;
   background-color: color-mix(in srgb, var(--surface-color) 90%, white 5%);
-  color: var(--default-color);
+  color: var(--accent-color);
 }
 
 .contact .contact-form .form-control:focus,
 .contact .contact-form .form-select:focus {
   box-shadow: none;
-  border-color: #059652;
+  border-color: var(--default-color);
 }
 
 .contact .contact-form .form-control::placeholder,
 .contact .contact-form .form-select::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--accent-color), transparent 50%);
 }
 
 .contact .contact-form .btn {
