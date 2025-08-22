@@ -232,4 +232,31 @@ document.addEventListener('click', function() {
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
+    const humburger = document.querySelector('.navbar-toggler');
+  const btnClose = document.querySelector('.btn-close');
+  const ofcanvasEL = document.getElementById('offcanvasNavbar');
+  const bsOffCanfas =  new bootstrap.Offcanvas(ofcanvasEL);
+  humburger.addEventListener('click', function() {
+    scrollTop.style.visibility = 'hidden';
+    humburger.classList.toggle('rotate');
+    setTimeout(function(){
+      scrollTop.style.display = 'none';
+      bsOffCanfas.show();
+    }, 500);
+  });
+  btnClose.addEventListener('click', function() {
+    btnClose.classList.toggle('rotate');
+    setTimeout(function(){
+      bsOffCanfas.hide();
+    }, 500);
+  });
+  ofcanvasEL.addEventListener('hidden.bs.offcanvas', function(){
+    humburger.classList.remove('rotate');
+    scrollTop.style.visibility = 'visible';
+  })
+  ofcanvasEL.addEventListener('show.bs.offcanvas', function(){
+    btnClose.classList.remove('rotate');
+  })
+
 })();

@@ -16,7 +16,10 @@
   --heading-font: "Nunito",  sans-serif;
   --nav-font: "Inter",  sans-serif;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Naskh+Arabic:wght@400..700&display=swap');
+.title-haramain{
+  font-family: 'Amiri', serif;
+}
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: rgb(2, 73, 2); /* Background color for the entire website, including individual sections */
@@ -757,6 +760,7 @@ section,
   transition: all 5s;
   animation: fade 10s infinite;
   height: 100vh;
+  padding-top: 50px;
 }
 
 @keyframes fade {
@@ -769,6 +773,18 @@ section,
   100%{
     background-image: url('../img/kabah2.jpg');
   }
+}
+#hero::after{
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgb(2, 73, 2), transparent, transparent);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hero .hero-content {
@@ -791,6 +807,12 @@ section,
 
 .hero .hero-content h1 .accent-text {
   color: #059652;
+}
+.explain{
+  background-color: var(--accent-color);
+  padding: 2rem;
+  color: var(--default-color);
+  border-radius: 20px;
 }
 
 .paragraf {
@@ -2473,3 +2495,82 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* icon whatsapp */
+.whatsapp{
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  color: var(--default-color);
+  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.whatsapp i{
+  font-size: 24px;
+}
+
+.whatsapp:hover  {
+  color: var(--default-color);
+  background-color: var(--heading-color);
+}
+
+/* navbar bootstrap */
+
+    .navbar{
+      border-radius: 40px;
+      top: 10px;
+      padding: 10px 0;
+    }
+    .navbar-toggler{
+      border: none;
+      outline: none;
+    }
+    .navbar-toggler:focus{
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+    .btn-close:focus{
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+    .rotate{
+      transform: rotate(360deg);
+      transition: all 0.8s ease;
+    }
+    .nav-myIcon{
+      margin-right: 5px;
+      color: inherit;
+    }
+    @media (min-width: 768px){
+      .nav-myIcon{
+        display: none;
+      }
+    }
+    .nav-link, .nav-link:focus, .nav-link i, .dropdown-item {
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+    .dropdown-menu{
+      outline: none;
+      border: none;
+    }
+    .nav-link:hover, .nav-link:hover i, .dropdown-item:hover {
+      color: var(--heading-color);
+    }
+    .dropdown-toggle{
+      color: var(--accent-color) !important;
+    }
+    .nav-link.active, .nav-link.active i {
+      color: var(--heading-color) !important;
+    }
+    .dropdown-item.active{
+      color: var(--heading-color) !important;
+      background-color: var(--accent-color);
+    }
+    .navbar-toggler, .btn-close {
+      color: var(--accent-color);
+    }
