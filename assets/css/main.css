@@ -12,17 +12,23 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Nunito",  sans-serif;
-  --nav-font: "Inter",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Nunito", sans-serif;
+  --nav-font: "Inter", sans-serif;
 }
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Naskh+Arabic:wght@400..700&display=swap');
-.title-haramain{
-  font-family: 'Amiri', serif;
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Naskh+Arabic:wght@400..700&display=swap");
+.title-haramain {
+  font-family: "Amiri", serif;
 }
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: rgb(2, 73, 2); /* Background color for the entire website, including individual sections */
+:root {
+  --background-color: rgb(
+    2,
+    73,
+    2
+  ); /* Background color for the entire website, including individual sections */
   --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
   --heading-color: gold; /* Color for headings, subheadings and title throughout the website */
   --accent-color: darkgreen; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -32,7 +38,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #212529;  /* The default color of the main navmenu links */
+  --nav-color: #212529; /* The default color of the main navmenu links */
   --nav-hover-color: #0d83fd; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -272,7 +278,7 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: #059652;
@@ -311,11 +317,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: #059652;
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -327,7 +333,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -430,7 +436,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -457,7 +463,7 @@ h6 {
     transition: 0.8s ease-in-out;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -567,7 +573,8 @@ h6 {
 
 .footer .copyright {
   padding: 25px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .copyright p {
@@ -577,6 +584,12 @@ h6 {
 .footer .credits {
   margin-top: 8px;
   font-size: 13px;
+}
+.footer .credits a {
+  color: var(--heading-color);
+}
+.footer .credits a:hover{
+  color: var(--default-color);
 }
 
 /*--------------------------------------------------------------
@@ -659,11 +672,11 @@ h6 {
   font-weight: 400;
 }
 
-.page-title .breadcrumbs ol li+li {
+.page-title .breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
+.page-title .breadcrumbs ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -683,7 +696,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 66px;
@@ -736,7 +748,12 @@ section,
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color), transparent 95%) 50%,
+    color-mix(in srgb, var(--accent-color), transparent 98%) 25%,
+    transparent 50%
+  );
 }
 
 .hero::before {
@@ -752,7 +769,7 @@ section,
 }
 
 #hero {
-  background-image: url('../img/kabah2.jpg');
+  background-image: url("../img/kabah2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -765,17 +782,17 @@ section,
 
 @keyframes fade {
   0% {
-    background-image: url('../img/kabah2.jpg');
+    background-image: url("../img/kabah2.jpg");
   }
-  50%{
-    background-image: url('../img/masjid-nabawi.jpg');
+  50% {
+    background-image: url("../img/masjid-nabawi.jpg");
   }
-  100%{
-    background-image: url('../img/kabah2.jpg');
+  100% {
+    background-image: url("../img/kabah2.jpg");
   }
 }
-#hero::after{
-  content: '';
+#hero::after {
+  content: "";
   position: absolute;
   bottom: -50px;
   left: 0;
@@ -808,7 +825,7 @@ section,
 .hero .hero-content h1 .accent-text {
   color: #059652;
 }
-.explain{
+.explain {
   background-color: var(--accent-color);
   padding: 2rem;
   color: var(--default-color);
@@ -819,11 +836,11 @@ section,
   width: 100%;
 }
 
-.qs{
+.qs {
   font-size: 1.2rem;
 }
 
-.hero-p{
+.hero-p {
   color: white;
   text-shadow: 1px 1px 10px #555;
   font-weight: 400;
@@ -839,10 +856,10 @@ section,
     text-align: center;
     margin-bottom: 3rem;
   }
-  .hero-p{
+  .hero-p {
     margin: auto;
   }
-  .header .logo h1{
+  .header .logo h1 {
     font-size: 1.2rem;
   }
   .hero .hero-content h1 {
@@ -1086,7 +1103,7 @@ section,
     font-size: 2rem;
   }
 }
-.note{
+.note {
   background-color: var(--accent-color);
   padding: 20px;
   border-radius: 20px;
@@ -1223,7 +1240,6 @@ section,
   animation: experience-float 3s ease-in-out infinite;
 }
 
-
 @media (max-width: 992px) {
   .about .image-wrapper .experience-badge {
     position: static;
@@ -1306,7 +1322,8 @@ section,
   border: 0;
   margin: 0;
 }
-.gambar-makkah, .gambar-madinah {
+.gambar-makkah,
+.gambar-madinah {
   width: 100%;
   border-radius: 30px;
   height: 300px;
@@ -1323,10 +1340,18 @@ section,
 }
 
 @keyframes bgChangeMakkah {
-  0%   { background-image: url('../img/tabmakkah1.jpeg'); }
-  33%  { background-image: url('../img/tabmakkah2.jpg'); }
-  66%  { background-image: url('../img/tabmakkah3.jpg'); }
-  100% { background-image: url('../img/tabmakkah1.jpeg'); }
+  0% {
+    background-image: url("../img/tabmakkah1.jpeg");
+  }
+  33% {
+    background-image: url("../img/tabmakkah2.jpg");
+  }
+  66% {
+    background-image: url("../img/tabmakkah3.jpg");
+  }
+  100% {
+    background-image: url("../img/tabmakkah1.jpeg");
+  }
 }
 
 /* Animasi untuk .gambar-madinah */
@@ -1335,14 +1360,21 @@ section,
 }
 
 @keyframes bgChangeMadinah {
-  0%   { background-image: url('../img/tabmadina1.jpg'); }
-  33%  { background-image: url('../img/tabmadina2.jpg'); }
-  66%  { background-image: url('../img/tabmadina3.jpg'); }
-  100% { background-image: url('../img/tabmadina1.jpg'); }
+  0% {
+    background-image: url("../img/tabmadina1.jpg");
+  }
+  33% {
+    background-image: url("../img/tabmadina2.jpg");
+  }
+  66% {
+    background-image: url("../img/tabmadina3.jpg");
+  }
+  100% {
+    background-image: url("../img/tabmadina1.jpg");
+  }
 }
 
 .education {
-
   padding-top: 30px;
 
   /* Untuk Firefox */
@@ -1660,7 +1692,6 @@ section,
 }
 
 @keyframes shapes-float {
-
   0%,
   100% {
     transform: scale(0.8) rotate(45deg) translateY(0);
@@ -2364,14 +2395,15 @@ section,
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
 
-.service-details .service-box+.service-box {
+.service-details .service-box + .service-box {
   margin-top: 30px;
 }
 
 .service-details .service-box h4 {
   font-size: 20px;
   font-weight: 700;
-  border-bottom: 2px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  border-bottom: 2px solid
+    color-mix(in srgb, var(--default-color), transparent 92%);
   padding-bottom: 15px;
   margin-bottom: 15px;
 }
@@ -2420,7 +2452,8 @@ section,
   align-items: center;
   padding: 10px 0;
   transition: 0.3s;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .service-details .download-catalog a:first-child {
@@ -2497,80 +2530,100 @@ section,
 }
 
 /* icon whatsapp */
-.whatsapp{
+.whatsapp {
+  visibility: hidden;
   position: fixed;
   left: 15px;
-  bottom: 15px;
+  bottom: -15px;
   color: var(--default-color);
   background-color: var(--accent-color);
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  opacity: 0;
+  transition: all 0.4s;
 }
-.whatsapp i{
+.whatsapp i {
   font-size: 24px;
+  line-height: 0;
 }
 
-.whatsapp:hover  {
+.whatsapp:hover {
   color: var(--default-color);
   background-color: var(--heading-color);
+}
+.whatsapp.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
 }
 
 /* navbar bootstrap */
 
-    .navbar{
-      border-radius: 40px;
-      top: 10px;
-      padding: 10px 0;
-    }
-    .navbar-toggler{
-      border: none;
-      outline: none;
-    }
-    .navbar-toggler:focus{
-      border: none;
-      outline: none;
-      box-shadow: none;
-    }
-    .btn-close:focus{
-      border: none;
-      outline: none;
-      box-shadow: none;
-    }
-    .rotate{
-      transform: rotate(360deg);
-      transition: all 0.8s ease;
-    }
-    .nav-myIcon{
-      margin-right: 5px;
-      color: inherit;
-    }
-    @media (min-width: 768px){
-      .nav-myIcon{
-        display: none;
-      }
-    }
-    .nav-link, .nav-link:focus, .nav-link i, .dropdown-item {
-      color: var(--accent-color);
-      font-weight: bold;
-    }
-    .dropdown-menu{
-      outline: none;
-      border: none;
-    }
-    .nav-link:hover, .nav-link:hover i, .dropdown-item:hover {
-      color: var(--heading-color);
-    }
-    .dropdown-toggle{
-      color: var(--accent-color) !important;
-    }
-    .nav-link.active, .nav-link.active i {
-      color: var(--heading-color) !important;
-    }
-    .dropdown-item.active{
-      color: var(--heading-color) !important;
-      background-color: var(--accent-color);
-    }
-    .navbar-toggler, .btn-close {
-      color: var(--accent-color);
-    }
+.navbar {
+  border-radius: 40px;
+  top: 10px;
+  padding: 10px 0;
+}
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+.navbar-toggler:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.btn-close:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.rotate {
+  transform: rotate(360deg);
+  transition: all 0.8s ease;
+}
+.nav-myIcon {
+  margin-right: 5px;
+  color: inherit;
+}
+@media (min-width: 768px) {
+  .nav-myIcon {
+    display: none;
+  }
+}
+.nav-link,
+.nav-link:focus,
+.nav-link i,
+.dropdown-item {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+.dropdown-menu {
+  outline: none;
+  border: none;
+}
+.nav-link:focus,
+.nav-link:hover,
+.nav-link:hover i,
+.dropdown-item:hover {
+  color: var(--heading-color);
+}
+.dropdown-toggle {
+  color: var(--accent-color) !important;
+}
+.dropdown-toggle:hover {
+  color: var(--heading-color) !important;
+}
+.nav-link.active,
+.nav-link.active i {
+  color: var(--heading-color) !important;
+}
+.dropdown-item.active {
+  color: var(--heading-color) !important;
+  background-color: var(--accent-color);
+}
+.navbar-toggler,
+.btn-close {
+  color: var(--accent-color);
+}
