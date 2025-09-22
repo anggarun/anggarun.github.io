@@ -147,6 +147,9 @@
   });
   // whats up button
   let waBtn = document.querySelector(".whatsapp");
+  const waLink = "https://wa.link/2ggoz2";
+  waBtn.setAttribute("href", waLink);
+  waBtn.setAttribute("target", "_blank");
 
   function toggleWaBtn() {
     if (waBtn) {
@@ -286,4 +289,6 @@
   ofcanvasEL.addEventListener("show.bs.offcanvas", function () {
     btnClose.classList.remove("rotate");
   });
+
+
 })();
