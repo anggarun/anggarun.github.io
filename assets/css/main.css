@@ -520,8 +520,8 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: var(--heading-color);
+  border-color: var(--heading-color);
 }
 
 .footer h4 {
