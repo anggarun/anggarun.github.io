@@ -1,6 +1,11 @@
-Thanks for downloading this template!
+# Bismillah
 
-Template Name: iLanding
-Template URL: https://bootstrapmade.com/ilanding-bootstrap-landing-page-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+## Landing Pages for Fadhilah Amal Haramain
+
+This website is a static website any data and information may not relevant for incoming service
+
+@copyright Fadhilahamal all right reserved
+
+Designed by BootstrapMade Distributed by BisaDesain
+
+Thank you!
