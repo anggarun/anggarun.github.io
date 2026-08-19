@@ -260,6 +260,24 @@ a:focus {
     .wrapper .content {
         padding: 15px;
     }
+
+    .header .content-inner {
+        padding: 70px 20px;
+        background-size: 55%;
+    }
+
+    .header .content-inner p {
+        font-size: 17px;
+    }
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .header h2,
+    .header .typed-cursor {
+        font-size: 18px;
+    }
 }
 
 
